@@ -1,0 +1,15 @@
+server:
+  port: 8301
+
+spring:
+  application:
+    name: springcloud-eureka-server
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8300/eureka/

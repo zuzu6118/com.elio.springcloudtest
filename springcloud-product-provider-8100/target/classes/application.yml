@@ -1,0 +1,26 @@
+server:
+  port: 8100 #端口號
+
+spring:
+  application:
+    name: springcloud-product-provider
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&userSSL=false
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+
+
+mybatis:
+  type-aliases-package: com.elio.springcloud.entity  # 表对应的实体类包
+  mapper-locations: classpath:mapping/*mapper.xml
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8300/eureka/,http://localhost:8301/eureka/

@@ -1,0 +1,4 @@
+com\elio\springcloud\config\RestConfig.class
+com\elio\springcloud\dto\Result.class
+com\elio\springcloud\controller\ProductConsumerController.class
+com\elio\springcloud\ProductConsumer8200.class
