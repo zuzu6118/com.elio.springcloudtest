@@ -12,7 +12,7 @@ public interface ProductService {
      * @param id
      * @return
      */
-    public Product selectById(Long id);
+    public Product selectById(Long id) throws Exception;
 
 
     /**

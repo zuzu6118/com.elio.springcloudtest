@@ -35,7 +35,7 @@ public class ProductProviderController {
      * @return
      */
     @GetMapping("product/provider/get/{id}")
-    public Result selectById(@PathVariable("id") Long id){
+    public Result selectById(@PathVariable("id") Long id) throws Exception {
         return new Result(200, "查询成功", productService.selectById(id));
     }
 

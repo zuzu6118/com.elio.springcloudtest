@@ -24,3 +24,9 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8300/eureka/,http://localhost:8301/eureka/
+
+management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
