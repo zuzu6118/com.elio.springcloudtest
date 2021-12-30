@@ -1,0 +1,20 @@
+
+spring:
+  cloud:
+    config:
+      name: configtest
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        service-id: springcloud-config-server
+      enabled: true
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8300/eureka/,http://localhost:8301/eureka/

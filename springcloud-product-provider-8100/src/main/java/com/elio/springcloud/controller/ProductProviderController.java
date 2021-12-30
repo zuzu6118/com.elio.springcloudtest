@@ -24,6 +24,15 @@ public class ProductProviderController {
     @Value("${server.port}")
     private String port;
 
+    @Value("${hello}")
+    private String hello;
+
+    @GetMapping("product/provider/get/config/info")
+    public Result getConfigInfo()
+    {
+          return new Result(200,"",this.hello);
+    }
+
     @GetMapping("product/provider/get/info")
      public Result getServiceInfo()
      {

@@ -1,0 +1,26 @@
+server:
+  port: 8600
+
+spring:
+  application:
+    name: springcloud-config-server # 应用名称
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/lizujing/springcloud-config-server.git
+          username: zuzu6118@163.com
+          password: zuzu13450183071
+          default-label: master
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8300/eureka/,http://localhost:8301/eureka/
+
+
+
+
