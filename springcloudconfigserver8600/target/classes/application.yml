@@ -12,6 +12,12 @@ spring:
           username: zuzu6118@163.com
           password: zuzu13450183071
           default-label: master
+  rabbitmq:
+    host: localhost
+    username: guest
+    password: guest
+    port: 5672
+
 eureka:
   instance:
     instance-id: ${spring.application.name}:${server.port}
@@ -20,6 +26,14 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8300/eureka/,http://localhost:8301/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  #指定刷新地址
+
+
 
 
 

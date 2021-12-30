@@ -6,6 +6,7 @@ import dto.Result;
 import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -13,6 +14,7 @@ import javax.annotation.Resource;
 @RestController
 @Log4j
 @RequestMapping("/")
+@RefreshScope
 public class ProductProviderController {
 
     @Resource

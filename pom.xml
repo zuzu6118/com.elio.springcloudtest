@@ -19,6 +19,8 @@
         <module>../springbootrabbitmqconsumer</module>
         <module>springcloudhystrixdashboard8400</module>
         <module>springcloudconfigserver8600</module>
+        <module>streamproducer8700</module>
+        <module>springcloudstreamconsumer8800</module>
     </modules>
 
     <!--统一管理jar包版本-->
